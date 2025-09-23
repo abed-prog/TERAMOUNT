@@ -1,0 +1,23 @@
+# Core 3D modeling library
+cadquery==2.4.0
+
+# Mesh processing and STL handling
+trimesh==4.0.5
+rtree==1.1.0
+
+# Numerical computing
+numpy==1.24.3
+
+# Data manipulation
+pandas==2.0.3
+
+# Plotting and visualization
+matplotlib==3.7.2
+
+# Optional: For better performance with trimesh
+pyglet==2.0.10
+scipy==1.11.4
+
+# Optional: For additional mesh features
+networkx==3.1
+shapely==2.0.2
