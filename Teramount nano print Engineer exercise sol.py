@@ -8,7 +8,7 @@
 !pip install -q cadquery trimesh rtree matplotlib pandas
 
 # -------------------------------------------------------------
-# 🔽 Import Libraries
+# Import Libraries
 # -------------------------------------------------------------
 import cadquery as cq
 from cadquery import exporters
@@ -16,7 +16,7 @@ import trimesh, numpy as np, pandas as pd, matplotlib.pyplot as plt
 from google.colab import files
 
 # -------------------------------------------------------------
-# 📥 USER INPUT
+#  USER INPUT
 # -------------------------------------------------------------
 # Prompt user to input dimensions for the house base (width, depth, height)
 w, d, h = map(float, input("Enter house base dimensions (width depth height): ").replace(',', ' ').split())
@@ -38,7 +38,7 @@ box_ymin = w / 2 - box_d / 2
 box_ymax = w / 2 + box_d / 2
 
 # -------------------------------------------------------------
-# 🏗️ 3D MODEL CONSTRUCTION
+# 3D MODEL CONSTRUCTION
 # -------------------------------------------------------------
 
 # 1. Create the house base (a simple box)
@@ -69,7 +69,7 @@ exporters.export(scene, stl_file)
 print(f"✅ STL saved as: {stl_file}")
 
 # -------------------------------------------------------------
-# 🖼️ CREATE 2D Z-PROJECTION (Top View)
+#  CREATE 2D Z-PROJECTION (Top View)
 # -------------------------------------------------------------
 
 # Load STL into trimesh for top-view projection
@@ -106,7 +106,7 @@ plt.savefig("Topography.png", dpi=300)
 print("✅ Topography saved as: Topography.png")
 
 # -------------------------------------------------------------
-# 📊 METADATA / DISTANCE MEASUREMENTS
+#  METADATA / POSITION AND DISTANCE MEASUREMENTS
 # -------------------------------------------------------------
 
 # Metadata for Element 1: House base and roof
@@ -184,7 +184,7 @@ with open(csv_file, "w") as f:
 print(f"✅ CSV saved as: {csv_file}")
 
 # -------------------------------------------------------------
-# 📥 DOWNLOAD RESULTS
+# DOWNLOAD RESULTS
 # -------------------------------------------------------------
 for f in (stl_file, "Topography.png", csv_file):
     files.download(f)
